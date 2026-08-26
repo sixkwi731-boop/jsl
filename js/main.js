@@ -255,3 +255,77 @@ if (faqList) {
     });
   }, true);
 }
+
+/**
+ * Google Ads — Clique WhatsApp - JSL Agregar
+ * send_to: AW-18412315798/WHbJCLPCp-gcEJbJ1stE
+ * options.newTab: preserva target="_blank" sem alterar o HTML dos links
+ */
+function gtag_report_conversion(url, options) {
+  var openInNewTab = !!(options && options.newTab);
+  var done = false;
+  var callback = function () {
+    if (done) return;
+    done = true;
+    if (typeof url != "undefined") {
+      if (openInNewTab) {
+        window.open(url, "_blank", "noopener,noreferrer");
+      } else {
+        window.location = url;
+      }
+    }
+  };
+
+  if (typeof gtag === "function") {
+    gtag("event", "conversion", {
+      send_to: "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
+      value: 1.0,
+      currency: "BRL",
+      event_callback: callback,
+    });
+  }
+
+  // Se o gtag estiver bloqueado/lento, o WhatsApp ainda abre
+  setTimeout(callback, 2000);
+  return false;
+}
+
+function isWhatsAppLink(href) {
+  if (!href) return false;
+  try {
+    var u = new URL(href, window.location.href);
+    var host = u.hostname.replace(/^www\./, "");
+    return (
+      host === "wa.me" ||
+      host === "api.whatsapp.com" ||
+      (host === "whatsapp.com" && u.pathname.indexOf("/send") === 0)
+    );
+  } catch (err) {
+    return /wa\.me|api\.whatsapp\.com|whatsapp\.com\/send/i.test(href);
+  }
+}
+
+document.addEventListener("click", function (e) {
+  if (e.defaultPrevented) return;
+  if (e.button !== 0) return;
+
+  var link = e.target.closest("a[href]");
+  if (!link || !isWhatsAppLink(link.href)) return;
+
+  // Ctrl/Cmd/Shift/Alt: deixa o navegador abrir nativamente e só registra a conversão
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
+        value: 1.0,
+        currency: "BRL",
+      });
+    }
+    return;
+  }
+
+  e.preventDefault();
+  gtag_report_conversion(link.href, {
+    newTab: link.target === "_blank",
+  });
+});
