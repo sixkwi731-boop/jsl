@@ -66,15 +66,8 @@ const footerHTML = `
             <h3>Matriz</h3>
             <p>
               Rua Doutor Renato Paes de Barros, 1017<br />
-              13º andar - Itaim Bibi – São Paulo/SP - CEP: 04530-001<br />
-              Telefone:<br />
-              <a href="tel:1131544000">+55 (11) 3154-4000</a><br />
-              <a href="tel:1123777000">+55 (11) 2377-7000</a>
+              13º andar - Itaim Bibi – São Paulo/SP - CEP: 04530-001
             </p>
-            <div class="sac">
-              <span>Fale com o nosso sac</span>
-              <a href="tel:08000195755"><strong>0800 01 95 755</strong></a>
-            </div>
           </div>
 
           <div class="footer-col">
