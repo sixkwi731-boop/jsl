@@ -30,10 +30,18 @@ const headerHTML = `
               <div class="siga visible-mobile">
                 <span>Siga-nos</span>
                 <div class="social">
-                  <a href="https://www.facebook.com/OficialJSL/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-                  <a href="https://www.linkedin.com/company/jsl-s.a./" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-                  <a href="https://www.instagram.com/oficialjsl/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-                  <a href="https://www.youtube.com/channel/UCavrb1pSnS302WgL5ssKRUw" target="_blank" rel="noopener noreferrer" aria-label="YouTube">yt</a>
+                  <a href="https://www.facebook.com/OficialJSL/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="12" height="18" viewBox="0 0 10 18" fill="currentColor" aria-hidden="true"><path d="M2.68 17.9V9.89H.5V7h2.18V4.54c0-1.94 1.29-3.71 4.25-3.71 1.2 0 2.09.11 2.09.11l-.07 2.69s-.9-.01-1.89-.01c-1.07 0-1.24.48-1.24 1.27V7h3.22L8.9 9.89H5.81V17.9H2.68Z"/></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/company/jsl-s.a./" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 19 19" fill="currentColor" aria-hidden="true"><path d="M4.11 18.9H.4V6.93h3.71V18.9ZM2.25 5.3A2.18 2.18 0 1 1 2.25.97a2.18 2.18 0 0 1 0 4.33Zm15.77 13.6h-3.71v-5.82c0-1.39-.03-3.17-1.93-3.17-1.93 0-2.23 1.51-2.23 3.07v5.92H6.44V6.93h3.56v1.63h.05c.5-.94 1.71-1.93 3.52-1.93 3.76 0 4.45 2.48 4.45 5.69v6.57Z"/></svg>
+                  </a>
+                  <a href="https://www.instagram.com/oficialjsl/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 19 19" fill="currentColor" aria-hidden="true"><path d="M9.05 1.97c2.43 0 2.74.01 3.69.05.96.04 1.61.2 2.18.42a4.4 4.4 0 0 1 1.59 1.03c.45.45.8.99 1.02 1.59.22.57.37 1.22.42 2.17.04.96.05 1.26.05 3.7s-.01 2.74-.05 3.69c-.04.95-.2 1.6-.42 2.17a4.4 4.4 0 0 1-1.03 1.59 4.4 4.4 0 0 1-1.58 1.03c-.57.22-1.22.37-2.18.42-.95.04-1.26.05-3.69.05s-2.74-.01-3.69-.05c-.96-.04-1.61-.2-2.18-.42a4.4 4.4 0 0 1-1.58-1.03 4.4 4.4 0 0 1-1.04-1.59c-.22-.57-.37-1.22-.41-2.17-.05-.95-.06-1.26-.06-3.7s.01-2.74.05-3.69c.04-.95.2-1.6.42-2.17A4.4 4.4 0 0 1 3.18 2.44c.45-.46.99-.8 1.59-1.03.57-.22 1.22-.37 2.17-.41.96-.05 1.27-.05 3.7-.05Zm0 1.61c-2.39 0-2.68.01-3.62.05-.87.04-1.35.19-1.66.31-.42.16-.72.36-1.03.67-.3.29-.53.64-.67 1.03-.12.32-.27.79-.31 1.66-.04.95-.05 1.23-.05 3.62s.01 2.68.05 3.62c.04.87.19 1.35.31 1.66.14.39.37.74.67 1.03.29.3.64.53 1.03.67.32.12.79.27 1.66.31.94.04 1.23.05 3.62.05s2.68-.01 3.62-.05c.87-.04 1.35-.19 1.66-.31.39-.14.74-.37 1.03-.67.3-.29.53-.64.67-1.03.12-.32.27-.79.31-1.66.04-.94.05-1.23.05-3.62s-.01-2.68-.05-3.62c-.04-.87-.19-1.35-.31-1.66a2.78 2.78 0 0 0-.67-1.03 2.78 2.78 0 0 0-1.03-.67c-.32-.12-.79-.27-1.66-.31-.94-.04-1.23-.05-3.62-.05Zm0 2.74a4.61 4.61 0 1 1 0 9.21 4.61 4.61 0 0 1 0-9.21Zm0 1.61a2.99 2.99 0 1 0 0 5.99 2.99 2.99 0 0 0 0-5.99Zm5.63-2.92a1.08 1.08 0 1 1 0 2.16 1.08 1.08 0 0 1 0-2.16Z"/></svg>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCavrb1pSnS302WgL5ssKRUw" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg width="16" height="12" viewBox="0 0 18 13" fill="currentColor" aria-hidden="true"><path d="M17.62 2.84a2.3 2.3 0 0 0-1.57-1.5C14.65.96 9.03.96 9.03.96A52.7 52.7 0 0 0 2.02 1.32a2.3 2.3 0 0 0-1.58 1.52A23.7 23.7 0 0 0 .08 6.94a23.8 23.8 0 0 0 .36 4.1 2.24 2.24 0 0 0 1.58 1.5c1.42.37 7.01.37 7.01.37a52.8 52.8 0 0 0 7.02-.35 2.24 2.24 0 0 0 1.57-1.5 23.8 23.8 0 0 0 .36-4.1 23.7 23.7 0 0 0-.36-4.12ZM7.25 9.49V4.38l4.67 2.56-4.67 2.55Z"/></svg>
+                  </a>
                 </div>
               </div>
             </div>
