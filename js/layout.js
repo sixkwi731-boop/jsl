@@ -21,10 +21,10 @@ const headerHTML = `
                 <li><a href="/agregados.html#duvidas">Dúvidas</a></li>
                 <li><a href="/agregados.html#contato">Contato</a></li>
                 <li class="visible-desktop">
-                  <a class="btn-orcamento" href="https://wa.me/5511954021951?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Cadastre-se</a>
+                  <a class="btn-orcamento" href="https://wa.me/5513991380918?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Cadastre-se</a>
                 </li>
                 <li class="visible-mobile">
-                  <a href="https://wa.me/5511954021951" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a href="https://wa.me/5513991380918" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </li>
               </ul>
               <div class="siga visible-mobile">
@@ -48,7 +48,7 @@ const headerHTML = `
             </div>
           </nav>
           <div class="area-mobile">
-            <a class="btn-orcamento" href="https://wa.me/5511954021951?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Cadastre-se</a>
+            <a class="btn-orcamento" href="https://wa.me/5513991380918?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Cadastre-se</a>
             <button class="toggle-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
               <span></span>
               <span></span>
@@ -83,8 +83,8 @@ const footerHTML = `
           <div class="footer-col">
             <h3>Cadastro de Agregados</h3>
             <ul class="footer-list footer-list--bullets">
-              <li><a href="https://wa.me/5511954021951?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Quero me cadastrar</a></li>
-              <li><a href="https://wa.me/5511954021951" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a></li>
+              <li><a href="https://wa.me/5513991380918?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer">Quero me cadastrar</a></li>
+              <li><a href="https://wa.me/5513991380918" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a></li>
               <li><a href="/fale-conosco.html">Fale Conosco</a></li>
             </ul>
           </div>
