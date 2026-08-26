@@ -1,0 +1,8 @@
+{
+  "name": "seja-agregado-jsl",
+  "private": true,
+  "description": "Site Seja um Agregado JSL",
+  "scripts": {
+    "dev": "npx --yes serve -p 5500 ."
+  }
+}
