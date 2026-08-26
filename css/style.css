@@ -270,21 +270,35 @@ body.menu-open header {
   gap: 12px;
 }
 
+.nav .siga .social a,
 .siga .social a {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-  color: var(--white);
-  display: inline-flex;
+  color: #fff;
+  background: transparent;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 0;
+  line-height: 0;
+  text-transform: none;
+  text-decoration: none;
 }
 
+.nav .siga .social a svg,
 .siga .social a svg {
   display: block;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
+  fill: #fff;
+  color: #fff;
+  overflow: visible;
 }
 
 .siga .social a:hover,
