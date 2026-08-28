@@ -258,9 +258,36 @@ if (faqList) {
 
 /**
  * Google Ads — Clique WhatsApp - JSL Agregar
- * send_to: AW-18412315798/WHbJCLPCp-gcEJbJ1stE
+ * AW-18412315798/WHbJCLPCp-gcEJbJ1stE
+ * AW-17960933106/VEMmCMnfw-kcEPKtuPRC
  * options.newTab: preserva target="_blank" sem alterar o HTML dos links
  */
+var WHATSAPP_CONVERSIONS = [
+  "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
+  "AW-17960933106/VEMmCMnfw-kcEPKtuPRC",
+];
+
+function fireWhatsAppConversions(onComplete) {
+  if (typeof gtag !== "function") return;
+
+  var remaining = WHATSAPP_CONVERSIONS.length;
+  if (!remaining) return;
+
+  WHATSAPP_CONVERSIONS.forEach(function (send_to) {
+    gtag("event", "conversion", {
+      send_to: send_to,
+      value: 1.0,
+      currency: "BRL",
+      event_callback: function () {
+        remaining -= 1;
+        if (remaining === 0 && typeof onComplete === "function") {
+          onComplete();
+        }
+      },
+    });
+  });
+}
+
 function gtag_report_conversion(url, options) {
   var openInNewTab = !!(options && options.newTab);
   var done = false;
@@ -276,14 +303,7 @@ function gtag_report_conversion(url, options) {
     }
   };
 
-  if (typeof gtag === "function") {
-    gtag("event", "conversion", {
-      send_to: "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
-      value: 1.0,
-      currency: "BRL",
-      event_callback: callback,
-    });
-  }
+  fireWhatsAppConversions(callback);
 
   // Se o gtag estiver bloqueado/lento, o WhatsApp ainda abre
   setTimeout(callback, 2000);
@@ -314,13 +334,7 @@ document.addEventListener("click", function (e) {
 
   // Ctrl/Cmd/Shift/Alt: deixa o navegador abrir nativamente e só registra a conversão
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
-    if (typeof gtag === "function") {
-      gtag("event", "conversion", {
-        send_to: "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
-        value: 1.0,
-        currency: "BRL",
-      });
-    }
+    fireWhatsAppConversions();
     return;
   }
 
