@@ -257,21 +257,19 @@ if (faqList) {
 }
 
 /**
- * Google Ads — Clique WhatsApp - JSL Agregar
- * AW-18412315798/WHbJCLPCp-gcEJbJ1stE
- * AW-17960933106/VEMmCMnfw-kcEPKtuPRC
+ * Google Ads — Clique WhatsApp
+ * Tag base: AW-18431345901
+ * Adicione labels de conversão em WHATSAPP_CONVERSIONS quando o Google Ads fornecer o snippet.
  * options.newTab: preserva target="_blank" sem alterar o HTML dos links
  */
-var WHATSAPP_CONVERSIONS = [
-  "AW-18412315798/WHbJCLPCp-gcEJbJ1stE",
-  "AW-17960933106/VEMmCMnfw-kcEPKtuPRC",
-];
+var WHATSAPP_CONVERSIONS = [];
 
 function fireWhatsAppConversions(onComplete) {
-  if (typeof gtag !== "function") return;
-
   var remaining = WHATSAPP_CONVERSIONS.length;
-  if (!remaining) return;
+  if (!remaining || typeof gtag !== "function") {
+    if (typeof onComplete === "function") onComplete();
+    return;
+  }
 
   WHATSAPP_CONVERSIONS.forEach(function (send_to) {
     gtag("event", "conversion", {
