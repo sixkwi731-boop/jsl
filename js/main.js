@@ -257,12 +257,13 @@ if (faqList) {
 }
 
 /**
- * Google Ads — Clique WhatsApp
- * Tag base: AW-18431345901
- * Adicione labels de conversão em WHATSAPP_CONVERSIONS quando o Google Ads fornecer o snippet.
+ * Google Ads — Lead | WhatsApp | Clique no Site
+ * send_to: AW-18431345901/teEiCK-I2u4cEO2J4NRE
  * options.newTab: preserva target="_blank" sem alterar o HTML dos links
  */
-var WHATSAPP_CONVERSIONS = [];
+var WHATSAPP_CONVERSIONS = [
+  "AW-18431345901/teEiCK-I2u4cEO2J4NRE",
+];
 
 function fireWhatsAppConversions(onComplete) {
   var remaining = WHATSAPP_CONVERSIONS.length;

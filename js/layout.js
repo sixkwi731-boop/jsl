@@ -151,3 +151,13 @@ const headerMount = document.querySelector("[data-site-header]");
 const footerMount = document.querySelector("[data-site-footer]");
 if (headerMount) headerMount.outerHTML = headerHTML;
 if (footerMount) footerMount.outerHTML = footerHTML;
+
+if (!document.querySelector(".whatsapp-float")) {
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `<a class="whatsapp-float" href="https://wa.me/5513991380918?text=Ol%C3%A1%2C%20quero%20me%20cadastrar%20como%20agregado%20JSL." target="_blank" rel="noopener noreferrer" aria-label="Falar com a JSL pelo WhatsApp">
+      <span class="whatsapp-float__label">Fale no WhatsApp</span>
+      <span class="whatsapp-float__icon" aria-hidden="true"></span>
+    </a>`
+  );
+}
