@@ -574,8 +574,30 @@ body.menu-open header {
 
 /* Agregar */
 .s-agregar {
-  background: var(--bg);
+  background: #2f2f2f;
   padding: 48px 0;
+  color: #fff;
+}
+
+.s-agregar .titulo {
+  color: var(--red);
+}
+
+.s-agregar .titulo::before {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.s-agregar .texto p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.s-agregar .texto strong {
+  color: var(--red);
+}
+
+.s-agregar .btn-branco {
+  background: var(--white);
+  color: var(--text);
 }
 
 .agregar-grid {
@@ -608,26 +630,31 @@ body.menu-open header {
 
 /* Conheça */
 .s-conheca {
-  background: var(--white);
+  background: #2f2f2f;
   padding: 48px 0 64px;
   overflow: visible;
+  color: #fff;
 }
 
 .s-conheca .titulo {
   margin-bottom: 20px;
+  color: var(--red);
 }
 
 .s-conheca .titulo::before {
-  display: none;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .s-conheca .titulo::after {
-  content: "";
-  display: block;
-  width: 35px;
-  height: 3px;
-  background: var(--muted);
-  margin-top: 12px;
+  display: none;
+}
+
+.s-conheca .texto p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.s-conheca .texto strong {
+  color: var(--red);
 }
 
 .conheca-grid {
@@ -664,8 +691,16 @@ body.menu-open header {
 .conheca-grid .info {
   position: relative;
   z-index: 2;
-  background: var(--white);
+  background: transparent;
   padding-top: 4px;
+}
+
+.s-conheca .conheca-dots button {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.s-conheca .conheca-dots button.is-active {
+  background: var(--red);
 }
 
 .tablet {
